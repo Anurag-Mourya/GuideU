@@ -1,0 +1,52 @@
+/* Color Variables */
+$primary-color: #6C63FF; /* Royal Purple */
+$secondary-color: #00D2D3; /* Cyan/Teal */
+$dark-bg: #0F0F1A; /* Deep Navy */
+$text-light: #F5F5F7; /* Off-White */
+$text-muted: #A0A0B0; /* Grey-Blue */
+$glass-bg: rgba(255, 255, 255, 0.05);
+$glass-border: rgba(255, 255, 255, 0.1);
+$success: #2ECC71;
+$error: #FF4757;
+
+/* Typography */
+$font-family: 'Inter', sans-serif;
+
+/* Spacing */
+$section-padding: 100px 0;
+$container-width: 1280px;
+
+/* Mixins */
+@mixin glass {
+  background: $glass-bg;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid $glass-border;
+  border-radius: 16px;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}

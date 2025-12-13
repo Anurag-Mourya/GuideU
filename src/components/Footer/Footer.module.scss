@@ -1,0 +1,120 @@
+@import '../../styles/variables';
+
+.footer {
+    background: darken($dark-bg, 5%);
+    padding-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+    .container {
+        @include container;
+    }
+
+    .ctaSection {
+        background: linear-gradient(135deg, rgba($primary-color, 0.2), rgba($secondary-color, 0.1));
+        border-radius: 20px;
+        padding: 60px 40px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 80px;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        form {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            max-width: 500px;
+            margin: 0 auto;
+
+            @include mobile {
+                flex-direction: column;
+            }
+
+            input {
+                flex: 1;
+                padding: 16px;
+                border-radius: 50px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                background: rgba(0, 0, 0, 0.3);
+                color: white;
+                outline: none;
+
+                &:focus {
+                    border-color: $secondary-color;
+                }
+            }
+
+            button {
+                padding: 16px 32px;
+                border-radius: 50px;
+                border: none;
+                background: $primary-color;
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.3s;
+
+                &:hover {
+                    background: lighten($primary-color, 10%);
+                }
+            }
+        }
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        flex-wrap: wrap;
+        gap: 40px;
+
+        .brand {
+            h3 {
+                font-size: 1.5rem;
+                color: $text-light;
+            }
+
+            p {
+                font-size: 0.9rem;
+                max-width: 300px;
+            }
+        }
+
+        .column {
+            h4 {
+                font-size: 1.1rem;
+                color: white;
+                margin-bottom: 20px;
+            }
+
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            a {
+                color: $text-muted;
+                font-size: 0.95rem;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        padding: 20px 0;
+        text-align: center;
+        font-size: 0.85rem;
+        color: darken($text-muted, 20%);
+    }
+}

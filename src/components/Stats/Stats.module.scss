@@ -1,0 +1,67 @@
+@import '../../styles/variables';
+
+.statsSection {
+    padding: $section-padding;
+    background: lighten($dark-bg, 3%);
+    position: relative;
+
+    .container {
+        @include container;
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+
+            span {
+                color: $error;
+                /* Highlight negative stats with red/error color initially or just mute */
+            }
+        }
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 40px 20px;
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: $secondary-color;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-size: 1.1rem;
+            color: $text-light;
+            font-weight: 500;
+        }
+
+        .sub {
+            font-size: 0.9rem;
+            color: $text-muted;
+            margin-top: 10px;
+            display: block;
+        }
+    }
+}
