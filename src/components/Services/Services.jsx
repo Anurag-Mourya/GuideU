@@ -5,6 +5,9 @@ const servicesList = [
     { title: "Loan Assistance", desc: "Simplifying the process of securing education loans.", icon: "💰" },
     { title: "Scholarships", desc: "Information about grants and financial benefits.", icon: "🎓" },
     { title: "Workshops", desc: "Skill development to equip you for professional success.", icon: "🛠️" },
+    { title: "Personalized Guidance", desc: "From upskilling options to the best master’s programs, we’ll provide clarity that’s perfect for your unique goals.", icon: "✨" },
+    { title: "Real Advice", desc: "Forget peer pressure. Get insights backed by industry experts.", icon: "💡" },
+    { title: "Top Program Recommendations", desc: "Learn which degrees employers from TCS, Infosys, Amazon, and Deloitte actually value.", icon: "🏆" },
 ];
 
 const Services = () => {
