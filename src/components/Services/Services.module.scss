@@ -46,9 +46,9 @@
             font-size: 2rem;
             margin-bottom: 20px;
             padding: 15px;
-            background: rgba($primary-color, 0.2);
+            background: color-mix(in srgb, $primary-color, transparent 80%);
             border-radius: 12px;
-            color: lighten($primary-color, 20%);
+            color: color-mix(in srgb, $primary-color, white 20%);
         }
 
         h3 {

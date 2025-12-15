@@ -16,7 +16,7 @@ const Hero = () => {
                     <Link href="#register" className={styles.primaryBtn}>
                         Book Free Consultation
                     </Link>
-                    <Link href="#services" className={styles.secondaryBtn}>
+                    <Link href="#courses" className={styles.secondaryBtn}>
                         Explore Courses
                     </Link>
                 </div>

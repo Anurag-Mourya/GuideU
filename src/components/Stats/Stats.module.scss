@@ -2,7 +2,7 @@
 
 .statsSection {
     padding: $section-padding;
-    background: lighten($dark-bg, 3%);
+    background: color-mix(in srgb, $dark-bg, white 10%);
     position: relative;
 
     .container {

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../../public/GuidEU_logo.png";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
@@ -17,7 +19,9 @@ const Footer = () => {
 
                 <div className={styles.links}>
                     <div className={styles.brand}>
-                        <h3>GuideU</h3>
+                        <Link href="/">
+                            <Image src={logo} alt="GuideU Logo" style={{ height: "80px", width: "auto", marginBottom: "1rem" }} />
+                        </Link>
                         <p>Right Career No Confusion. Part of Takshashila Education Consultancy.</p>
                     </div>
                     <div className={styles.column}>
@@ -25,7 +29,15 @@ const Footer = () => {
                         <Link href="#">Home</Link>
                         <Link href="#about">About</Link>
                         <Link href="#services">Services</Link>
+                        <Link href="#courses">Courses</Link>
                         <Link href="#contact">Contact</Link>
+                    </div>
+                    <div className={styles.column}>
+                        <h4>Contact Us</h4>
+                        <p>96/05 Chetan tower chunniganj chauraha, Kanpur.</p>
+                        <p>📞 8318978873, 7388208899</p>
+                        <p>📱 WhatsApp: 7388208899, 8795208899</p>
+                        <p>📩 guideuexpert@gmail.com</p>
                     </div>
                     <div className={styles.column}>
                         <h4>Socials</h4>

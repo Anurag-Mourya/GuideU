@@ -10,7 +10,7 @@
     overflow: hidden;
     // background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, $dark-bg 100%);
 
-    background-image: linear-gradient(to right, rgba(15, 15, 26, 0.321) 0%, rgba(15, 15, 26, 0.7) 100%), url("https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-image: linear-gradient(to bottom, var(--hero-overlay-start) 0%, #ffffff00 100%), url(https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1600);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -23,7 +23,7 @@
         left: -10%;
         width: 600px;
         height: 600px;
-        background: radial-gradient(circle, rgba($primary-color, 0.2) 0%, transparent 70%);
+        background: radial-gradient(circle, color-mix(in srgb, $primary-color, transparent 80%) 0%, transparent 70%);
         filter: blur(80px);
         animation: float 10s infinite ease-in-out;
         z-index: 0;
@@ -36,7 +36,7 @@
         right: -5%;
         width: 500px;
         height: 500px;
-        background: radial-gradient(circle, rgba($secondary-color, 0.15) 0%, transparent 70%);
+        background: radial-gradient(circle, color-mix(in srgb, $secondary-color, transparent 85%) 0%, transparent 70%);
         filter: blur(60px);
         animation: float 12s infinite ease-in-out reverse;
         z-index: 0;
@@ -55,7 +55,7 @@
         font-weight: 800;
         line-height: 1.1;
         margin-bottom: 24px;
-        background: linear-gradient(to right, #fff, #b4b4b4);
+        background: var(--hero-heading-gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
@@ -72,7 +72,7 @@
 
     p {
         font-size: 1.25rem;
-        color: $text-light;
+        color: #F5F5F7;
         margin-bottom: 40px;
         max-width: 600px;
         margin-left: auto;
@@ -92,27 +92,27 @@
 
     .primaryBtn {
         padding: 16px 32px;
-        background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+        background: linear-gradient(135deg, $primary-color, color-mix(in srgb, $primary-color, black 10%));
         color: white;
         font-size: 1.1rem;
         font-weight: 600;
         border-radius: 50px;
         border: none;
         cursor: pointer;
-        box-shadow: 0 4px 15px rgba($primary-color, 0.4);
+        box-shadow: 0 4px 15px color-mix(in srgb, $primary-color, transparent 60%);
         transition: all 0.3s ease;
 
         &:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba($primary-color, 0.5);
+            box-shadow: 0 8px 25px color-mix(in srgb, $primary-color, transparent 50%);
         }
     }
 
     .secondaryBtn {
         padding: 16px 32px;
         background: transparent;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        color: $text-light;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        color: #F5F5F7;
         font-size: 1.1rem;
         font-weight: 600;
         border-radius: 50px;
@@ -120,8 +120,8 @@
         transition: all 0.3s ease;
 
         &:hover {
-            border-color: $text-light;
-            background: rgba(255, 255, 255, 0.05);
+            border-color: #ffffff;
+            background: var(--btn-hover-bg);
         }
     }
 }

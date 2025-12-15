@@ -2,7 +2,7 @@
 
 .about {
     padding: $section-padding;
-    background: radial-gradient(circle at 10% 20%, #1e1e2f 0%, $dark-bg 100%);
+    background: radial-gradient(circle at 10% 20%, var(--about-gradient-start) 0%, $dark-bg 100%);
     position: relative;
     overflow: hidden;
 
@@ -14,7 +14,7 @@
         right: -100px;
         width: 400px;
         height: 400px;
-        background: radial-gradient(circle, rgba($secondary-color, 0.1) 0%, transparent 60%);
+        background: radial-gradient(circle, color-mix(in srgb, $secondary-color, transparent 90%) 0%, transparent 60%);
         border-radius: 50%;
         filter: blur(50px);
     }
@@ -50,7 +50,7 @@
         font-size: 2.8rem;
         margin-bottom: 40px;
         line-height: 1.2;
-        background: linear-gradient(to right, $text-light, darken($text-light, 20%));
+        background: linear-gradient(to right, $text-light, $text-muted);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
@@ -72,7 +72,7 @@
         p {
             font-size: 1.05rem;
             line-height: 1.7;
-            color: lighten($text-muted, 10%);
+            color: color-mix(in srgb, $text-muted, white 10%);
         }
 
         .mission {

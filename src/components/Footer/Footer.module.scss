@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .footer {
-    background: darken($dark-bg, 5%);
+    background: color-mix(in srgb, $dark-bg, black 5%);
     padding-top: 80px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 
@@ -10,7 +10,7 @@
     }
 
     .ctaSection {
-        background: linear-gradient(135deg, rgba($primary-color, 0.2), rgba($secondary-color, 0.1));
+        background: linear-gradient(135deg, color-mix(in srgb, $primary-color, transparent 80%), color-mix(in srgb, $secondary-color, transparent 90%));
         border-radius: 20px;
         padding: 60px 40px;
         text-align: center;
@@ -43,8 +43,8 @@
                 padding: 16px;
                 border-radius: 50px;
                 border: 1px solid rgba(255, 255, 255, 0.2);
-                background: rgba(0, 0, 0, 0.3);
-                color: white;
+                background: var(--input-bg);
+                color: $text-light;
                 outline: none;
 
                 &:focus {
@@ -63,7 +63,7 @@
                 transition: background 0.3s;
 
                 &:hover {
-                    background: lighten($primary-color, 10%);
+                    background: color-mix(in srgb, $primary-color, white 10%);
                 }
             }
         }
@@ -92,7 +92,7 @@
         .column {
             h4 {
                 font-size: 1.1rem;
-                color: white;
+                color: $text-light;
                 margin-bottom: 20px;
             }
 
@@ -115,6 +115,6 @@
         padding: 20px 0;
         text-align: center;
         font-size: 0.85rem;
-        color: darken($text-muted, 20%);
+        color: color-mix(in srgb, $text-muted, black 20%);
     }
 }
