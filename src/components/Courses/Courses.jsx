@@ -2,6 +2,20 @@ import Image from "next/image";
 import styles from "./Courses.module.scss";
 
 const Courses = () => {
+    // Map titles to specific Unsplash Image IDs
+    const courseImages = {
+        "Management": "1517245386807-bb43f82c33c4", // Meeting/Work
+        "Engineering": "1581091226825-a6a2a5aee158", // Laptop/Tech
+        "Art": "1560419015-7c427e8ae5ba", // Creative/Paint
+        "Science": "1532094349884-543bc11b234d", // Lab/Test tubes
+        "Computer": "1498050108023-c5249f4df085", // Coding/Macbook
+        "BBA": "1523240795612-9a054b0db644", // Students/Group
+        "BCA": "1571260899304-425eee4c7efc", // Study/Desk
+        "B.Tech": "1531482615713-2afd69097998", // Workers/Tech
+        "MBA": "1507679799987-c73779587ccf", // Professional/Suit
+        "MCA": "1555099962-4199c345e5dd"  // Code/Screen
+    };
+
     const fields = [
         "Management",
         "Engineering",
@@ -18,8 +32,15 @@ const Courses = () => {
         "MCA"
     ];
 
-    // Helper to generate consistent random image
-    const getImage = (seed) => `https://picsum.photos/seed/${seed}/400/300`;
+    // Helper to generate image URL
+    const getImage = (title) => {
+        const id = courseImages[title];
+        if (id) {
+            return `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=400&q=80`;
+        }
+        // Fallback if ID is missing
+        return `https://picsum.photos/seed/${title}/400/300`;
+    };
 
     const Card = ({ title }) => (
         <div className={styles.card}>
