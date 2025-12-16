@@ -34,6 +34,25 @@ const Footer = () => {
                         </Link>
                         <p>Right Career No Confusion. Part of Takshashila Education Consultancy.</p>
                     </div>
+
+                    <div className={styles.column}>
+                        <h4>Field</h4>
+                        <Link href="#">Management</Link>
+                        <Link href="#about">Engineering</Link>
+                        <Link href="#about">Art</Link>
+                        <Link href="#services">Science</Link>
+                        <Link href="#courses">Computer</Link>
+                    </div>
+
+                    <div className={styles.column}>
+                        <h4>Courses Offered</h4>
+                        <Link href="#contact">BBA</Link>
+                        <Link href="#contact">BCA</Link>
+                        <Link href="#contact">B.Tech</Link>
+                        <Link href="#contact">MBA</Link>
+                        <Link href="#contact">MCA</Link>
+                    </div>
+
                     <div className={styles.column}>
                         <h4>Menu</h4>
                         <Link href="#">Home</Link>
