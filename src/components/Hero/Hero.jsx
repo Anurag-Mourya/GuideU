@@ -13,7 +13,7 @@ const Hero = () => {
                     Indispensable guidance for students and professionals. Unlock your full potential with personalized support and strategic future planning.
                 </p>
                 <div className={styles.btnGroup}>
-                    <Link href="#register" className={styles.primaryBtn}>
+                    <Link href="#contact" className={styles.primaryBtn}>
                         Book Free Consultation
                     </Link>
                     <Link href="#courses" className={styles.secondaryBtn}>

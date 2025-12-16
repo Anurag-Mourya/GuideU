@@ -61,9 +61,9 @@ const Navbar = () => {
                     <button onClick={toggleTheme} className={styles.themeToggle} aria-label="Toggle Theme">
                         {theme === 'dark' ? '☀️' : '🌙'}
                     </button>
-                    <Link href="#register" className={styles.ctaBtn}>
+                    {/* <Link href="#register" className={styles.ctaBtn}>
                         Get Started
-                    </Link>
+                    </Link> */}
                 </div>
 
                 {/* Mobile Toggle */}
