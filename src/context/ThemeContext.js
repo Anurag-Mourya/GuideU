@@ -11,6 +11,8 @@ export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState("dark");
     const [mounted, setMounted] = useState(false);
 
+    // console.log("themetheme", theme)
+
     useEffect(() => {
         setMounted(true);
         // improved toggle logic: check local storage or system preference

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import logo from "../../../public/GuidEU_logo.png";
+import ForDarklogo from "../../../public/darkEU.png";
 import styles from "./Navbar.module.scss";
 import Image from "next/image";
 
@@ -21,14 +22,30 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    console.log("scrolled", scrolled)
+    console.log("theme", theme)
+
     return (
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
             <div className={styles.container}>
 
                 <Link href="/" className={styles.logo}>
-                    <Image src={logo} alt="GuideU Logo" priority />
 
-                    {/* Guide<span>U</span> */}
+                    {scrolled ?
+                        (theme === "light") ?
+                            <Image src={logo} alt="GuideU Logo" priority /> :
+                            <Image src={ForDarklogo} alt="GuideU Logo" priority />
+                        :
+                        (theme === "light") ?
+                            <Image src={ForDarklogo} alt="GuideU Logo" priority />
+                            :
+                            (theme === "dark") ?
+                                <Image src={ForDarklogo} alt="GuideU Logo" priority />
+                                :
+                                <Image src={logo} alt="GuideU Logo" priority />
+                    }
+
+
                 </Link>
 
                 {/* Desktop Links */}
@@ -37,7 +54,7 @@ const Navbar = () => {
                     <Link href="#about">About</Link>
                     <Link href="#services">Services</Link>
                     <Link href="#courses">Courses</Link>
-                    <Link href="#register">Contact</Link>
+                    <Link href="#contact">Contact</Link>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -64,7 +81,7 @@ const Navbar = () => {
                 <Link href="#about" onClick={() => setMobileMenuOpen(false)}>About</Link>
                 <Link href="#services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
                 <Link href="#courses" onClick={() => setMobileMenuOpen(false)}>Courses</Link>
-                <Link href="#register" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+                <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
                 <Link href="#register" onClick={() => setMobileMenuOpen(false)} style={{ color: '#00D2D3' }}>Get Started</Link>
             </div>
         </nav>
